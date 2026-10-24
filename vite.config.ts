@@ -121,3 +121,5 @@ export default defineConfig(({ mode }) => mode === 'tv' ? configTv : {
     },
     // Aumenta um pouco o limite para evitar warnings desnecessários
     chunkSizeWarningLimit: 600,
+    },
+})
