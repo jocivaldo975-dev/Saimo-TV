@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect, useMemo, lazy, Suspense } from 'react';
-import { HashRouter, BrowserRouter, Routes, Route, useNavigate, useLocation, useParams } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation, useParams } from 'react-router-dom';
 import { BarraTopo } from './components/BarraTopo';
 import { AdultModeContext, useAdultMode } from './contexts/adultoContexto';
 import { Inicio } from './telas/Inicio';
@@ -628,7 +628,7 @@ function AppLayout() {
   return (
     <>
     <Routes>
-      <Route path="/" element={<Inicio key={chave} />} />
+      <Route path="/" element={<Navigate to="/movies" replace />} />
       <Route path="/busca" element={<Busca key={chave} />} />
       <Route path="/eventos" element={<Eventos />} />
       <Route path="/favoritos" element={<Favoritos key={chave} />} />
