@@ -627,7 +627,7 @@ function AppLayout() {
   return (
     <>
     <Routes>
-      <Route path="/" element={<Navigate to="/movies" replace />} />
+      <Route path="/" element={<Inicio key={chave} />} />
       <Route path="/busca" element={<Busca key={chave} />} />
       <Route path="/eventos" element={<Eventos />} />
       <Route path="/favoritos" element={<Favoritos key={chave} />} />
