@@ -2,7 +2,6 @@ import { useState, useCallback, useEffect, useMemo, lazy, Suspense } from 'react
 import { HashRouter, BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation, useParams } from 'react-router-dom';
 import { BarraTopo } from './components/BarraTopo';
 import { AdultModeContext, useAdultMode } from './contexts/adultoContexto';
-import { Inicio } from './telas/Inicio';
 import { Eventos } from './telas/Eventos';
 import { Radios } from './telas/Radios';
 import { Favoritos } from './telas/Favoritos';
