@@ -43,7 +43,7 @@ export function Inicio() {
     sessionStorage.setItem('saimo-entrada', '1');
     try {
       const ao = JSON.parse(localStorage.getItem(CHAVE_AO_INICIAR) || '"inicio"');
-      if (ao === 'ultimo' && localStorage.getItem('tv-last-channel')) navigate('/tv', { replace: true });
+      if (ao === 'tv' || (ao === 'ultimo' && localStorage.getItem('tv-last-channel'))) navigate('/tv', { replace: true });
     } catch { /* valor ilegível: fica no Início */ }
   }, [navigate]);
   useEffect(() => aoMudarVodFav(() => setVodFav(vodFavoritos())), []);

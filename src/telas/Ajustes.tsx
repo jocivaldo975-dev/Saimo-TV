@@ -21,7 +21,7 @@ import {
 import type { Channel } from '../types/channel';
 import './Ajustes.css';
 
-export type AoIniciar = 'inicio' | 'ultimo';
+export type AoIniciar = 'inicio' | 'ultimo' | 'tv';
 export const CHAVE_AO_INICIAR = 'saimo-ao-iniciar';
 
 export type ModoUpscaling = 'off' | 'hd' | '4k';
@@ -136,6 +136,7 @@ export function Ajustes() {
           <div className="pilulas">
             <button className={aoIniciar === 'inicio' ? 'on' : ''} onClick={() => setAoIniciar('inicio')}>Início</button>
             <button className={aoIniciar === 'ultimo' ? 'on' : ''} onClick={() => setAoIniciar('ultimo')}>Último canal assistido</button>
+            <button className={aoIniciar === 'tv' ? 'on' : ''} onClick={() => setAoIniciar('tv')}>TV ao vivo</button>
           </div>
         </section>
 
